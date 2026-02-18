@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-spring/parallax": "^10.0.3",
+    "autoprefixer": "^10.4.24",
     "framer-motion": "^12.34.1",
     "next": "16.1.6",
     "postcss": "^8.5.6",
