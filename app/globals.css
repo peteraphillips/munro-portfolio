@@ -1,26 +1,146 @@
+@config "../tailwind.config.ts";
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html, body {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.parallax-bg {
+  position: fixed;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%; /* slightly taller to prevent gaps */
+  object-fit: cover;
+  transform: translateY(0);
+  will-change: transform;
+  transition: background-image 0.5s ease;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Optional: simple scroll effect for subtle parallax */
+html {
+  scroll-behavior: smooth;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+a {
+  transition: color 0.5s ease;
+}
+
+@layer utilities {
+  /* Add smooth scroll for mist overlay if needed later */
+}
+
+/* Studio Ghibli Theme */
+.ghibli-mode {
+  background: linear-gradient(135deg, #A3B18A 0%, #7BB661 50%, #5A7D4E 100%);
+  min-height: 100vh;
+  transition: background-color 0.5s ease;
+  color: #3D2C1A;
+  font-family: 'Futura', 'Trebuchet MS', sans-serif;
+  
+}
+.ghibli-mode body {
+  background: linear-gradient(135deg, #A3B18A 0%, #7BB661 50%, #5A7D4E 100%);
+  color: #3D2C1A;
+  font-family: 'Futura', 'Trebuchet MS', sans-serif;
+}
+
+.ghibli-mode * {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+  font-family: 'Futura', 'Trebuchet MS', sans-serif;
+}
+
+/* Text colors - warm and soft */
+.ghibli-mode h1,
+.ghibli-mode h2,
+.ghibli-mode h3,
+.ghibli-mode h4,
+.ghibli-mode h5,
+.ghibli-mode h6 {
+  color: #3D2C1A;
+  font-family: 'Futura', 'Trebuchet MS', sans-serif;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.ghibli-mode a {
+  color: #3D2C1A;
+}
+
+.ghibli-mode a:hover {
+  color: #0B3D2E;
+  text-shadow: 0 0 8px rgba(11, 61, 46, 0.9);
+}
+
+/* Buttons - soft styled */
+.ghibli-mode button {
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(123, 189, 97, 0.3);
+  transition: all 0.3s ease;
+  font-family: 'Futura', 'Trebuchet MS', sans-serif;
+}
+
+.ghibli-mode button:hover {
+  box-shadow: 0 6px 20px rgba(90, 125, 78, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Sections */
+.ghibli-mode section {
+  background: rgba(255, 255, 255, .1);
+}
+
+/* Input fields */
+.ghibli-mode input,
+.ghibli-mode textarea {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  color: #3D2C1A;
+  transition: all 0.3s ease;
+  font-family: 'Futura', 'Trebuchet MS', sans-serif;
+}
+
+.ghibli-mode input:focus,
+.ghibli-mode textarea:focus {
+  border-color: #3D2C1A;
+  box-shadow: 0 0 10px rgba(61, 44, 26, 0.2);
+}
+
+/* Overlay adjustments */
+.ghibli-mode .bg-gradient-to-b {
+  background: linear-gradient(
+    to bottom,
+    rgba(163, 177, 138, 0.3),
+    rgba(123, 189, 97, 0.2),
+    rgba(90, 125, 78, 0.2)
+  ) !important;
+}
+
+/* Navigation - nature tones */
+.ghibli-mode nav {
+  background: none;
+
+}
+
+.ghibli-mode nav a {
+  color: #3D2C1A;
+  transition: all 0.3s ease;
+  font-family: 'Futura', 'Trebuchet MS', sans-serif;
+}
+
+.ghibli-mode nav a:hover {
+  color: #0B3D2E;
+  text-shadow: 0 0 8px rgba(11, 61, 46, 0.9);
+
+}
+
+/* Special glow effect for text in Ghibli mode */
+.ghibli-mode .drop-shadow-lg {
+  filter: drop-shadow(0 0 8px rgba(163, 177, 138, 0.3));
+}
+
+/* Footer */
+.ghibli-mode footer {
+  font-family: 'Futura', 'Trebuchet MS', sans-serif; 
 }
