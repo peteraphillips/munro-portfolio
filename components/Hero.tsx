@@ -23,7 +23,7 @@ export default function Hero() {
     >
       {/* Mountains Parallax */}
       <div
-        className="absolute top-0 right-0 w-full h-full -z-20 overflow-hidden"
+        className="animate-fadeIn absolute top-0 right-0 w-full h-full -z-20 overflow-hidden"
         style={{
           backgroundImage: isGhibliMode
             ? "url('/images/mountain-bg(ghibli).png')"

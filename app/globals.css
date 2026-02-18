@@ -22,29 +22,25 @@ html, body {
 /* Optional: simple scroll effect for subtle parallax */
 html {
   scroll-behavior: smooth;
+  
 }
 
 a {
   transition: color 0.5s ease;
 }
 
-@layer utilities {
-  /* Add smooth scroll for mist overlay if needed later */
-}
-
 /* Studio Ghibli Theme */
 .ghibli-mode {
-  background: linear-gradient(135deg, #A3B18A 0%, #7BB661 50%, #5A7D4E 100%);
-  min-height: 100vh;
   transition: background-color 0.5s ease;
   color: #3D2C1A;
   font-family: 'Futura', 'Trebuchet MS', sans-serif;
-  
+
 }
+
 .ghibli-mode body {
-  background: linear-gradient(135deg, #A3B18A 0%, #7BB661 50%, #5A7D4E 100%);
   color: #3D2C1A;
   font-family: 'Futura', 'Trebuchet MS', sans-serif;
+
 }
 
 .ghibli-mode * {
@@ -88,7 +84,8 @@ a {
 
 /* Sections */
 .ghibli-mode section {
-  background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(2px) brightness(0.9);
+  
 }
 
 /* Input fields */

@@ -1,3 +1,4 @@
+import { keyframes } from "framer-motion";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -15,6 +16,15 @@ const config: Config = {
         heading: ["Raleway", "sans-serif"],
         body: ["Inter", "sans-serif"],
         futura: ["Futura", "Trebuchet MS", "sans-serif"],
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: '0' },
+          "100%": { opacity: '1' },
+        }
+      },
+      animation: {
+        fadeIn: "fadeIn 2s ease-in-out forwards",
       },
     },
   },
