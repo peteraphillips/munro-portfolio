@@ -2,7 +2,32 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Skills from "@/components/Skills";
 import { useGhibliTheme } from "@/contexts/GhibliThemeContext";
+
+const projects = [
+  {
+    name: "Munro Tracker 🗺️",
+    description:
+      "A web app that allows users to explore and track their progress on Scotland's Munros. Built with React, Next.js, TypeScript, and TailwindCSS. The app features an interactive map, a comprehensive database of Munros, and a user-friendly interface for tracking climbs and sharing achievements. Walkhighlands.com is the obvious alternative but doesn't have a number of features that I'd like to see in a more modern, accessible app.",
+    techStack: ["React", "Next.js", "TypeScript", "TailwindCSS"],
+    link: "#",
+  },
+  {
+    name: "Rugby Snap! 🏉",
+    description:
+      "So far just a proof of concept and very bare-bones prototype of a rugby card game idea I came up with. My first experience with game development and if it goes further I will have to do some app development to make it playable on mobile. Fun little project aligned with one of my other hobbies: rugby.",
+    techStack: ["React", "Next.js", "TypeScript", "TailwindCSS"],
+    link: "https://github.com/peteraphillips/rugby-snap",
+  },
+  {
+    name: "Local event finder 🎟️",
+    description:
+      "A simple web app that allows users to find local events using the ticketmaster API. My first web app building a React project with TailwindCSS.",
+    techStack: ["React", "Next.js", "TypeScript", "TailwindCSS"],
+    link: "https://local-events-finder.vercel.app/",
+  },
+];
 
 export default function About() {
 
@@ -11,18 +36,20 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative min-h-screen flex items-center justify-center px-6 bg-emerald"
+      className="relative min-h-screen flex items-center justify-center px-6 py-12 transition-all"
     >
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="max-w-4xl text-center md:text-left"
+        className="max-w-4xl text-center md:text-left backdrop-blur-sm bg-gray-50/5 rounded-lg p-6"
       >
         <p className="mb-4 text-xl md:text-3xl">
-          I’m a full-stack developer and Munro bagger. I craft digital
-          experiences as carefully as I climb Scotland’s Munros.
+          I’m a{" "}
+          <span className={`${isGhibliMode ? "text-sunset" : "text-skyBlue"} font-bold text-shadow-sm text-shadow-first/20`}>full-stack developer</span>{" "}
+          and <span className={`${isGhibliMode ? "text-sunset" : "text-skyBlue"} font-bold text-shadow-sm text-shadow-first/20`}>Munro bagger</span>. I
+          craft digital experiences as carefully as I climb Scotland’s Munros.
         </p>
         <p className="text-xl md:text-3xl">
           I specialize in React, Next.js, TypeScript, and TailwindCSS. When I’m
@@ -31,59 +58,60 @@ export default function About() {
         </p>
         <br />
         <br />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 transform transition-transform duration-200">
           {/* Project Card */}
-          <motion.div
-            whileHover={{ y: -3, boxShadow: "0 10px 15px rgba(0, 0, 0, 0.1)" }}
-            className="group relative bg-gradient-to-br from-pineGreen/10 to-mossGreen/10 backdrop-blur-sm rounded-lg overflow-hidden border border-pineGreen/20 hover:border-pineGreen/40 transition-all duration-300"
-          >
-            {/* Gradient Background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-pineGreen/5 via-transparent to-mossGreen/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          {projects.map((project) => (
+            <motion.div
+              key={project.name}
+              whileHover={{
+                y: -3,
+                boxShadow: "0 10px 15px rgba(0, 0, 0, 0.1)",
+              }}
+              className="group relative backdrop-blur-sm rounded-lg overflow-hidden border border-second/10 hover:border-second/90 transition-colors duration-200"
+            >
+              <div className={`absolute inset-0 ${
+                isGhibliMode ? "bg-sunset/40" : "bg-skyBlue/40"
+              } group-hover:opacity-100 transition-opacity duration-200`} />
 
-            {/* Content */}
-            <div className="relative p-6 h-full flex flex-col justify-between">
-              <div>
-                <h4 className="text-xl font-heading text-leafGreen mb-2">
-                  Project Name
-                </h4>
+              {/* Content */}
+              <div className="relative p-6 h-full flex flex-col justify-between">
+                <div>
+                  <h4 className="text-xl font-semibold font-heading mb-2">
+                    {project.name}
+                  </h4>
 
-                {/* Animated Pulsing Line */}
-                <motion.div
-                  animate={{ scaleX: [0.9, 1.05, 0.9] }}
-                  transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                  className="h-1 bg-gradient-to-r from-transparent via-mossGreen to-transparent mb-4 origin-center"
-                  style={{ transformOrigin: "center" }}
-                />
+                  <div className={`w-full h-1 ${isGhibliMode ? "bg-skyBlue" : "bg-sunset"} mb-2`} />
 
-                <p className=" text-sm leading-relaxed mb-4">
-                  A brief description of your project and the technologies used
-                  to build it.
-                </p>
+                  <p className="text-md md:text-base leading-relaxed mb-4">
+                    {project.description}
+                  </p>
+                </div>
+
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.techStack.map((tech) => (
+                    <span
+                      key={tech}
+                      className={`px-3 py-1 ${isGhibliMode ? "bg-skyBlue/80" : "bg-sunset/80"} text-xs rounded-full`}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* CTA Link */}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  className={`inline-flex items-center font-semibold`}
+                >
+                  View Project →
+                </a>
               </div>
-
-              {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 bg-pineGreen/20 text-pineGreen text-xs rounded-full font-semibold">
-                  React
-                </span>
-                <span className="px-3 py-1 bg-mossGreen/20 text-leafGreen text-xs rounded-full font-semibold">
-                  Next.js
-                </span>
-                <span className="px-3 py-1 bg-mistyGreen/20 text-mistyGreen text-xs rounded-full font-semibold">
-                  TypeScript
-                </span>
-              </div>
-
-              {/* CTA Link */}
-              <a
-                href="#"
-                className="inline-flex items-center text-leafGreen hover:text-pineGreen font-semibold transition-colors duration-200"
-              >
-                View Project →
-              </a>
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
+        <Skills />
       </motion.div>
     </section>
   );

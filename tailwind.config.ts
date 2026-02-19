@@ -6,11 +6,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        pineGreen: "#0B3D2E",    // deep forest
-        mossGreen: "#5A7D4E",    // hover / accent
-        mistyGreen: "#A3B18A",   // mist/overlay
-        leafGreen: "#7BB661",    // highlights
-        barkBrown: "#3D2C1A",    // earthy accent
+        sunset: "#FFC107",
+        skyBlue: "#26D9F5",      // light accent
+        first: "#D7A1B8",
+        second: "#C1A4B0"
       },
       fontFamily: {
         heading: ["Raleway", "sans-serif"],
@@ -20,7 +19,7 @@ const config: Config = {
       keyframes: {
         fadeIn: {
           "0%": { opacity: '0' },
-          "100%": { opacity: '1' },
+          "100%": { opacity: '.9' },
         }
       },
       animation: {

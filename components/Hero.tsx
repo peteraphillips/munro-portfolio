@@ -26,8 +26,8 @@ export default function Hero() {
         className="animate-fadeIn absolute top-0 right-0 w-full h-full -z-20 overflow-hidden"
         style={{
           backgroundImage: isGhibliMode
-            ? "url('/images/mountain-bg(ghibli).png')"
-            : "url('/images/mountain-bg.jpg')",
+            ? "url('/images/mountain-bg(ghibli).webp')"
+            : "url('/images/mountain-bg.webp')",
           backgroundSize: "cover",
           backgroundPosition: `center bottom ${-offsetY * .25}px `,
           transition: "background-image 0.5s ease",
@@ -39,10 +39,9 @@ export default function Hero() {
         className={`absolute inset-0 -z-10 pointer-events-none ${
           isGhibliMode
             ? "bg-gradient-to-b from-yellow-100/20 via-yellow-50/10 to-amber-100/15"
-            : "bg-gradient-to-b from-black/60 via-black/20 to-black/80"
+            : "bg-gradient-to-b from-black/10 via-black/15 to-black/20"
         }`}
         style={{
-          // transform: `translateY(${-offsetY * .25}px)`,
           transition: "background 0.5s ease",
         }}
       />
@@ -57,13 +56,13 @@ export default function Hero() {
         }`}
       >
         <h1
-          className={`text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg ${
+          className={`text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg ${
             isGhibliMode
               ? "text-barkBrown font-futura"
               : "text-white font-heading"
           }`}
         >
-          Hi, I’m Peter
+          Hi, I’m <span className={`text-6xl md:text-8xl font-bold ${isGhibliMode ? "text-sunset" : "text-skyBlue"} text-shadow-lg text-shadow-first/30`}>Peter</span>
         </h1>
 
         <p
@@ -89,17 +88,6 @@ export default function Hero() {
             loop
           />
         </p>
-
-        {/* <a
-          href="#projects"
-          className={`px-6 py-3 rounded-full transition-all duration-300 drop-shadow-lg inline-block font-futura font-semibold ${
-            isGhibliMode
-              ? "bg-amber-600 hover:bg-amber-700 text-white"
-              : "bg-pineGreen hover:bg-mossGreen text-white"
-          }`}
-        >
-          Explore The Peaks
-        </a> */}
       </motion.div>
 
       {/* Scroll Indicator */}

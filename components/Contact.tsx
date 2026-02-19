@@ -20,8 +20,8 @@ export default function Contact() {
           <Image
             src="/images/in-logo/InBug-White.png"
             alt="LinkedIn Logo"
-            width={60}
-            height={60}
+            width={80}
+            height={80}
           />
         </a>
         <a
@@ -32,8 +32,8 @@ export default function Contact() {
           <Image
             src="/images/github-logo.png"
             alt="GitHub Logo"
-            width={60}
-            height={60}
+            width={80}
+            height={80}
           />
         </a>
         <a
@@ -43,8 +43,8 @@ export default function Contact() {
           <Image
             src="/images/gmail.png"
             alt="Gmail Logo"
-            width={60}
-            height={60}
+            width={80}
+            height={80}
           />
         </a>
       </motion.div>

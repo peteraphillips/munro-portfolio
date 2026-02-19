@@ -26,19 +26,23 @@ html {
 }
 
 a {
-  transition: color 0.5s ease;
+  transition: color 0.2s ease;
 }
 
+a:hover {
+  color: #26D9F5;
+  text-shadow: 0 0 8px #26D9F5;
+}
 /* Studio Ghibli Theme */
 .ghibli-mode {
   transition: background-color 0.5s ease;
-  color: #3D2C1A;
+  color: #191311;
   font-family: 'Futura', 'Trebuchet MS', sans-serif;
 
 }
 
 .ghibli-mode body {
-  color: #3D2C1A;
+  color: #191311;
   font-family: 'Futura', 'Trebuchet MS', sans-serif;
 
 }
@@ -55,18 +59,18 @@ a {
 .ghibli-mode h4,
 .ghibli-mode h5,
 .ghibli-mode h6 {
-  color: #3D2C1A;
+  color: #191311;
   font-family: 'Futura', 'Trebuchet MS', sans-serif;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 }
 
 .ghibli-mode a {
-  color: #3D2C1A;
+  color: #191311;
 }
 
 .ghibli-mode a:hover {
-  color: #0B3D2E;
-  text-shadow: 0 0 8px rgba(11, 61, 46, 0.9);
+  color: #FFC107;
+  text-shadow: 0 0 8px #FFC107;
 }
 
 /* Buttons - soft styled */
@@ -84,7 +88,6 @@ a {
 
 /* Sections */
 .ghibli-mode section {
-    backdrop-filter: blur(2px) brightness(0.9);
   
 }
 
@@ -93,14 +96,14 @@ a {
 .ghibli-mode textarea {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 15px;
-  color: #3D2C1A;
+  color: #191311;
   transition: all 0.3s ease;
   font-family: 'Futura', 'Trebuchet MS', sans-serif;
 }
 
 .ghibli-mode input:focus,
 .ghibli-mode textarea:focus {
-  border-color: #3D2C1A;
+  border-color: #191311;
   box-shadow: 0 0 10px rgba(61, 44, 26, 0.2);
 }
 
@@ -121,15 +124,14 @@ a {
 }
 
 .ghibli-mode nav a {
-  color: #3D2C1A;
+  color: #191311;
   transition: all 0.3s ease;
   font-family: 'Futura', 'Trebuchet MS', sans-serif;
 }
 
 .ghibli-mode nav a:hover {
-  color: #0B3D2E;
-  text-shadow: 0 0 8px rgba(11, 61, 46, 0.9);
-
+  color: #FFC107;
+  text-shadow: 0 0 8px, #FFC107;
 }
 
 /* Special glow effect for text in Ghibli mode */
