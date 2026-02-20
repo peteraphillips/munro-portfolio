@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import RainingOverlay from "@/components/RainingOverlay";
 import Contour from "@/components/Contour";
+import Munros from "@/components/Munros";
 
 export default function Page() {
   return (
@@ -18,6 +19,7 @@ export default function Page() {
       <Navbar />
       <Hero />
       <About />
+      <Munros />
       <Contact />
       <Footer />
     </main>

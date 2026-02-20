@@ -33,7 +33,7 @@ export default function Skills() {
               y: -3,
               boxShadow: "0 10px 15px rgba(0, 0, 0, 0.1)",
             }}
-            className={`border flex flex-col items-center justify-center p-4 ${isGhibliMode ? "bg-sunset/50 border-sunset/60 hover:border-first/90" : "bg-skyBlue/50 border-skyBlue/60 hover:border-first/90"} transition-all duration-50 w-full text-center rounded-sm`}
+            className={`border flex flex-col items-center justify-center p-4 ${isGhibliMode ? "bg-sunset/50 border-sunset/60 hover:border-first/90" : "bg-skyBlue/50 border-skyBlue/60 hover:border-first/90"} transition-all duration-50 w-full text-center rounded-xs`}
           >
             <p className="mb-1 font-semibold text-md">{skill.name}</p>
           </motion.div>

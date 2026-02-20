@@ -9,7 +9,8 @@ const config: Config = {
         sunset: "#FFC107",
         skyBlue: "#26D9F5",      // light accent
         first: "#D7A1B8",
-        second: "#C1A4B0"
+        second: "#C1A4B0",
+        darkText: "#191311"
       },
       fontFamily: {
         heading: ["Raleway", "sans-serif"],

@@ -30,7 +30,6 @@ const projects = [
 ];
 
 export default function About() {
-
   const { isGhibliMode } = useGhibliTheme();
 
   return (
@@ -47,9 +46,19 @@ export default function About() {
       >
         <p className="mb-4 text-xl md:text-3xl">
           I’m a{" "}
-          <span className={`${isGhibliMode ? "text-sunset" : "text-skyBlue"} font-bold text-shadow-sm text-shadow-first/20`}>full-stack developer</span>{" "}
-          and <span className={`${isGhibliMode ? "text-sunset" : "text-skyBlue"} font-bold text-shadow-sm text-shadow-first/20`}>Munro bagger</span>. I
-          craft digital experiences as carefully as I climb Scotland’s Munros.
+          <span
+            className={`${isGhibliMode ? "text-sunset" : "text-skyBlue"} font-bold text-shadow-sm text-shadow-first/20`}
+          >
+            full-stack developer
+          </span>{" "}
+          and{" "}
+          <span
+            className={`${isGhibliMode ? "text-sunset" : "text-skyBlue"} font-bold text-shadow-sm text-shadow-first/20`}
+          >
+            Munro bagger
+          </span>
+          . I craft digital experiences as carefully as I climb Scotland’s
+          Munros.
         </p>
         <p className="text-xl md:text-3xl">
           I specialize in React, Next.js, TypeScript, and TailwindCSS. When I’m
@@ -67,11 +76,13 @@ export default function About() {
                 y: -3,
                 boxShadow: "0 10px 15px rgba(0, 0, 0, 0.1)",
               }}
-              className="group relative backdrop-blur-sm rounded-lg overflow-hidden border border-second/10 hover:border-second/90 transition-colors duration-200"
+              className="group relative backdrop-blur-sm rounded-xs overflow-hidden border border-second/10 hover:border-second/90 transition-colors duration-200"
             >
-              <div className={`absolute inset-0 ${
-                isGhibliMode ? "bg-sunset/40" : "bg-skyBlue/40"
-              } group-hover:opacity-100 transition-opacity duration-200`} />
+              <div
+                className={`absolute inset-0 ${
+                  isGhibliMode ? "bg-sunset/40" : "bg-skyBlue/40"
+                } group-hover:opacity-100 transition-opacity duration-200`}
+              />
 
               {/* Content */}
               <div className="relative p-6 h-full flex flex-col justify-between">
@@ -80,7 +91,13 @@ export default function About() {
                     {project.name}
                   </h4>
 
-                  <div className={`w-full h-1 ${isGhibliMode ? "bg-skyBlue" : "bg-sunset"} mb-2`} />
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100%" }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                    className={`w-full h-1 ${isGhibliMode ? "bg-skyBlue" : "bg-sunset"} mb-2`}
+                  />
 
                   <p className="text-md md:text-base leading-relaxed mb-4">
                     {project.description}
@@ -92,7 +109,7 @@ export default function About() {
                   {project.techStack.map((tech) => (
                     <span
                       key={tech}
-                      className={`px-3 py-1 ${isGhibliMode ? "bg-skyBlue/80" : "bg-sunset/80"} text-xs rounded-full`}
+                      className={`px-3 py-1 ${isGhibliMode ? "bg-skyBlue/80" : "bg-sunset/80"} text-xs font-semibold rounded-full`}
                     >
                       {tech}
                     </span>
@@ -103,9 +120,13 @@ export default function About() {
                 <a
                   href={project.link}
                   target="_blank"
-                  className={`inline-flex items-center font-semibold`}
+                  className={`inline-flex items-center font-semibold w-fit`}
                 >
-                  View Project →
+                  <button
+                    className={`text-left ${isGhibliMode ? "bg-skyBlue hover:bg-sunset/20" : "bg-sunset hover:bg-skyBlue/20"} border border-white/0 hover:border-white px-4 py-2 max-w-fit rounded-xs hover:bg-skyBlue/20 cursor-pointer`}
+                  >
+                    View Project →
+                  </button>
                 </a>
               </div>
             </motion.div>

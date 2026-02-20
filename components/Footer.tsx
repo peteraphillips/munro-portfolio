@@ -4,7 +4,7 @@ import { section } from "framer-motion/client";
 export default function Footer() {
   return (
     <section>
-      <footer className="text-white py-6 flex flex-col items-center justify-center">
+      <footer className=" py-6 flex flex-col items-center justify-center">
         <p className="mb-2">
           © {new Date().getFullYear()} Peter Phillips Portfolio
         </p>

@@ -29,7 +29,7 @@ export default function Hero() {
             ? "url('/images/mountain-bg(ghibli).webp')"
             : "url('/images/mountain-bg.webp')",
           backgroundSize: "cover",
-          backgroundPosition: `center bottom ${-offsetY * .25}px `,
+          backgroundPosition: `center bottom ${-offsetY * 0.25}px `,
           transition: "background-image 0.5s ease",
         }}
       />
@@ -57,12 +57,27 @@ export default function Hero() {
       >
         <h1
           className={`text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg ${
-            isGhibliMode
-              ? "text-barkBrown font-futura"
-              : "text-white font-heading"
+            isGhibliMode ? " font-futura" : " font-heading"
           }`}
         >
-          Hi, I’m <span className={`text-6xl md:text-8xl font-bold ${isGhibliMode ? "text-sunset" : "text-skyBlue"} text-shadow-lg text-shadow-first/30`}>Peter</span>
+          Hi, I’m{" "}
+          <motion.span
+            animate={{
+              textShadow: [
+                "0px 0px 0px rgba(255,255,255,0.1)",
+                "0px 0px 20px rgba(0,255,255,0.3)",
+                "0px 0px 0px rgba(255,255,255,0.1)",
+              ],
+            }}
+            transition={{
+              duration: 2,
+              ease: "easeInOut",
+              repeat: Infinity,
+            }}
+            className={`text-6xl md:text-8xl font-bold ${isGhibliMode ? "text-sunset" : "text-skyBlue"}`}
+          >
+            Peter
+          </motion.span>
         </h1>
 
         <p
