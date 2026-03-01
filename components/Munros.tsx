@@ -139,7 +139,7 @@ export default function Munros() {
           transition={{ duration: 1 }}
           className={`h-1 ${isGhibliMode ? "bg-skyBlue" : "bg-sunset"} my-6 mx-auto`}
         />
-        <p className="mt-4 text-xl md:text-3xl">
+        <p className="mt-4 text-xl md:text-3xl text-left">
           Munros are Scotland&apos;s mountains that are over 3,000 feet (914.4
           meters) high. There are 282 Munros, and I am always looking for an
           apportunity to bag my next one.

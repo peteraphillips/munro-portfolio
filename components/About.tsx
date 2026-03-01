@@ -49,7 +49,7 @@ export default function About() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="max-w-4xl text-center md:text-left backdrop-blur-sm bg-gray-50/5 rounded-lg p-6 shadow-lg/40"
+        className="text-left max-w-4xl md:text-left backdrop-blur-sm bg-gray-50/5 rounded-lg p-6 shadow-lg/40"
       >
         <p className="mb-4 text-xl md:text-3xl">
           I’m a{" "}
