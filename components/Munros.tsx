@@ -122,14 +122,14 @@ export default function Munros() {
   return (
     <section
       id="munros"
-      className="relative flex items-center justify-center px-6 py-6 transition-all"
+      className="relative flex items-center justify-center px-6 py-6 transition-colors duration-300 "
     >
       <motion.div
         initial={{ opacity: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 4 }}
         animate={{ opacity: 1 }}
-        className="max-w-4xl text-center md:text-left backdrop-blur-sm bg-gray-50/5 rounded-lg p-6"
+        className="max-w-4xl text-center md:text-left backdrop-blur-sm bg-gray-50/5 rounded-lg p-6 shadow-lg/40"
       >
         <h2 className="text-4xl font-bold text-center  ">Munros</h2>
         <motion.div

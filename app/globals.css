@@ -22,6 +22,7 @@ html, body {
 /* Optional: simple scroll effect for subtle parallax */
 html {
   scroll-behavior: smooth;
+
 }
 
 a {
@@ -36,7 +37,7 @@ a:hover {
   transition: background-color 0.5s ease;
   color: #191311;
   font-family: 'Futura', 'Trebuchet MS', sans-serif;
-
+  transition: all 0.3 ease;
 }
 
 .ghibli-mode body {
@@ -48,6 +49,7 @@ a:hover {
 .ghibli-mode * {
   transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease font-family 0.4s ease;
   font-family: 'Futura', 'Trebuchet MS', sans-serif;
+
 }
 
 /* Text colors - warm and soft */

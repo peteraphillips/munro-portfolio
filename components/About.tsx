@@ -7,6 +7,13 @@ import { useGhibliTheme } from "@/contexts/GhibliThemeContext";
 
 const projects = [
   {
+    name: "Board Game Round Scorer 🎲",
+    description:
+      "A friend of mine tasked me with making an app that he can use to score a board game we play on a weekly basis. I said 'no problem mate.' Turns out there's a lot more to building an app liek this than I thought and I'm constantly going back to him for feedback. Features, UX components and ease of use improvements have made this a fun project to work on.",
+    techStack: ["React", "Next.js", "TypeScript", "TailwindCSS"],
+    link: "https://board-game-scorer.vercel.app/",
+  },
+  {
     name: "Munro Tracker 🗺️",
     description:
       "A web app that allows users to explore and track their progress on Scotland's Munros. Built with React, Next.js, TypeScript, and TailwindCSS. The app features an interactive map, a comprehensive database of Munros, and a user-friendly interface for tracking climbs and sharing achievements. Walkhighlands.com is the obvious alternative but doesn't have a number of features that I'd like to see in a more modern, accessible app.",
@@ -42,7 +49,7 @@ export default function About() {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="max-w-4xl text-center md:text-left backdrop-blur-sm bg-gray-50/5 rounded-lg p-6"
+        className="max-w-4xl text-center md:text-left backdrop-blur-sm bg-gray-50/5 rounded-lg p-6 shadow-lg/40"
       >
         <p className="mb-4 text-xl md:text-3xl">
           I’m a{" "}
