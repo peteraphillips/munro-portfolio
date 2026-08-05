@@ -18,7 +18,7 @@ const projects = [
     description:
       "A web app that allows users to explore and track their progress on Scotland's Munros. Built with React, Next.js, TypeScript, and TailwindCSS. The app features an interactive map, a comprehensive database of Munros, and a user-friendly interface for tracking climbs and sharing achievements. Walkhighlands.com is the obvious alternative but doesn't have a number of features that I'd like to see in a more modern, accessible app.",
     techStack: ["React", "Next.js", "TypeScript", "TailwindCSS"],
-    link: "#",
+    link: "#munros",
   },
   {
     name: "Rugby Snap! 🏉",
