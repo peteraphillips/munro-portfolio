@@ -13,7 +13,7 @@ export default function Contact() {
       <h2 className="text-4xl font-heading mb-12">Get in Touch</h2>
       <motion.div className="grid grid-cols-3 gap-8 md:gap-12">
         <a
-          href="https://linkedin.com/in/peteraphillips"
+          href="https://linkedin.com/in/peter-phillips-a64199165"
           target="_blank"
           className="text-leafGreen hover:underline flex justify-center"
         >
